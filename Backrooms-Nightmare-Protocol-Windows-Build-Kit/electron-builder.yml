@@ -1,0 +1,25 @@
+appId: com.backrooms.nightmareprotocol
+productName: The Backrooms - Nightmare Protocol
+directories:
+  output: release
+files:
+  - dist/**/*
+  - electron/main.cjs
+  - package.json
+asar: true
+extraMetadata:
+  main: electron/main.cjs
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: The Backrooms - Nightmare Protocol
